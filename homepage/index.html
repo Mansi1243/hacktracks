@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Skills Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #444;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header .logo {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        header .title {
+            font-size: 20px;
+            margin-left: 20px;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            margin-top: 100px; /* Adjust based on header height */
+            padding: 20px;
+        }
+
+        .hero {
+            width: 100%;
+            height: 400px;
+            background: url('https://via.placeholder.com/1600x400') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+        }
+
+        .small-sections {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .small-section {
+            width: 30%;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .small-section:hover {
+            transform: translateY(-10px);
+        }
+
+        .small-section h3 {
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #444;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Add responsiveness */
+        @media (max-width: 768px) {
+            .small-section {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Job Skills</div>
+        <div class="title">Your Guide to Career Success</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="#">Sign In</a></li>
+                <li><a href="#">Log In</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="main-content">
+            <div class="hero">
+                <h1>Discover Your Career Path</h1>
+            </div>
+        </div>
+        <section class="small-sections">
+            
+            <div class="small-section">
+                <h3>Section 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+            </div>
+            <div class="small-section">
+                <h3>Section 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+            </div>
+            <div class="small-section">
+                <h3>Section 3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Job Skills Website</p>
+    </footer>
+</body>
+</html>
