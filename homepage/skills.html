@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Skills - Skills</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #444;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header .logo {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        header .title {
+            font-size: 20px;
+            margin-left: 20px;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            margin-top: 100px; /* Adjust based on header height */
+            padding: 20px;
+        }
+
+        .skills-section {
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .skills-section h2 {
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        .skills-section .job {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+        }
+
+        .skills-section .job img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .skills-section .job-content {
+            max-width: 70%;
+        }
+
+        .skills-section .job-content h3 {
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        .skills-section .job-content p {
+            margin-bottom: 10px;
+        }
+
+        .skills-section .job-content a {
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .skills-section .job-content a:hover {
+            text-decoration: underline;
+        }
+
+        .skills-section .job-content ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        .skills-section .job-content ul li {
+            margin-bottom: 5px;
+        }
+
+        .skills-section .job-content .soft-skills, .skills-section .job-content .interview-questions {
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #444;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Add responsiveness */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .skills-section .job {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .skills-section .job img {
+                margin-bottom: 10px;
+            }
+
+            .skills-section .job-content {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Job Skills</div>
+        <div class="title">Your Guide to Career Success</div>
+        <nav>
+            <ul>
+                <li><a href="try.html">Home</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Sign In</a></li>
+                <li><a href="#">Log In</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="main-content">
+            <section id="skills-section" class="skills-section">
+                <h2>Job Skills and Courses</h2>
+                <div class="job">
+                    <img src="https://via.placeholder.com/200x150" alt="Software Developer">
+                    <div class="job-content">
+                        <h3>Software Developer</h3>
+                        <p>Learn how to develop software solutions using the latest technologies.</p>
+                        <ul>
+                            <li>Programming Languages (Java, Python, C++)</li>
+                            <li>Version Control (Git)</li>
+                            <li>Software Development Life Cycle (SDLC)</li>
+                            <li>Problem-Solving Skills</li>
+                        </ul>
+                        <div class="soft-skills">
+                            <h4>Soft Skills</h4>
+                            <ul>
+                                <li>Communication</li>
+                                <li>Teamwork</li>
+                                <li>Adaptability</li>
+                                <li>Attention to Detail</li>
+                            </ul>
+                        </div>
+                        <div class="interview-questions">
+                            <h4>Interview Questions</h4>
+                            <ul>
+                                <li>Describe your experience with object-oriented programming.</li>
+                                <li>How do you manage version control in your projects?</li>
+                                <li>Can you explain the SDLC process you follow?</li>
+                                <li>Give an example of a challenging bug you fixed.</li>
+                            </ul>
+                        </div>
+                        <a href="https://www.coursera.org/specializations/java-programming" target="_blank">Java Programming Specialization - Coursera</a>
+                    </div>
+                </div>
+                <div class="job">
+                    <img src="https://via.placeholder.com/200x150" alt="Data Scientist">
+                    <div class="job-content">
+                        <h3>Data Scientist</h3>
+                        <p>Analyze data to extract meaningful insights and make informed decisions.</p>
+                        <ul>
+                            <li>Statistics</li>
+                            <li>Data Analysis (Pandas, NumPy)</li>
+                            <li>Machine Learning (Scikit-Learn, TensorFlow)</li>
+                            <li>Data Visualization (Matplotlib, Seaborn)</li>
+                        </ul>
+                        <div class="soft-skills">
+                            <h4>Soft Skills</h4>
+                            <ul>
+                                <li>Critical Thinking</li>
+                                <li>Problem-Solving</li>
+                                <li>Communication</li>
+                                <li>Attention to Detail</li>
+                            </ul>
+                        </div>
+                        <div class="interview-questions">
+                            <h4>Interview Questions</h4>
+                            <ul>
+                                <li>Explain a machine learning project you have worked on.</li>
+                                <li>How do you handle missing data in a dataset?</li>
+                                <li>Describe the process of feature engineering.</li>
+                                <li>How do you choose the right model for your data?</li>
+                            </ul>
+                        </div>
+                        <a href="https://www.coursera.org/specializations/data-science-python" target="_blank">Data Science Specialization - Coursera</a>
+                    </div>
+                </div>
+                <div class="job">
+                    <img src="https://via.placeholder.com/200x150" alt="UI/UX Designer">
+                    <div class="job-content">
+                        <h3>UI/UX Designer</h3>
+                        <p>Design intuitive and engaging user interfaces and experiences.</p>
+                        <ul>
+                            <li>User Research</li>
+                            <li>Wireframing and Prototyping</li>
+                            <li>Visual Design</li>
+                            <li>Interaction Design</li>
+                        </ul>
+                        <div class="soft-skills">
+                            <h4>Soft Skills</h4>
+                            <ul>
+                                <li>Creativity</li>
+                                <li>Empathy</li>
+                                <li>Collaboration</li>
+                                <li>Attention to Detail</li>
+                            </ul>
+                        </div>
+                        <div class="interview-questions">
+                            <h4>Interview Questions</h4>
+                            <ul>
+                                <li>How do you conduct user research?</li>
+                                <li>Can you walk us through your design process?</li>
+                                <li>How do you handle feedback from clients or stakeholders?</li>
+                                <li>Describe a project where you improved the user experience.</li>
+                            </ul>
+                        </div>
+                        <a href="https://www.coursera.org/specializations/interaction-design" target="_blank">Interaction Design Specialization - Coursera</a>
+                    </div>
+                </div>
+                <div class="job">
+                    <img src="https://via.placeholder.com/200x150" alt="Digital Marketer">
+                    <div class="job-content">
+                        <h3>Digital Marketer</h3>
+                        <p>Learn to market products and services online using SEO, SEM, and social media strategies.</p>
+                        <ul>
+                            <li>SEO and SEM</li>
+                            <li>Content Marketing</li>
+                            <li>Social Media Marketing</li>
+                            <li>Email Marketing</li>
+                        </ul>
+                        <div class="soft-skills">
+                            <h4>Soft Skills</h4>
+                            <ul>
+                                <li>Creativity</li>
+                                <li>Communication</li>
+                                <li>Analytical Thinking</li>
+                                <li>Time Management</li>
+                            </ul>
+                        </div>
+                        <div class="interview-questions">
+                            <h4>Interview Questions</h4>
+                            <ul>
+                                <li>How do you measure the success of a digital marketing campaign?</li>
+                                <li>What strategies do you use for SEO?</li>
+                                <li>Describe a successful social media campaign you managed.</li>
+                                <li>How do you stay updated with digital marketing trends?</li>
+                            </ul>
+                        </div>
+                        <a href="https://www.udacity.com/course/digital-marketing-nanodegree--nd018" target="_blank">Digital Marketing Nanodegree - Udacity</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Job Skills Website</p>
+    </footer>
+</body>
+</html>
