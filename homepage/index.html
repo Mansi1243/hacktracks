@@ -141,7 +141,7 @@
         }
 
         footer a {
-            color: #20298d;
+            color: #0f9cee;
             text-decoration: none;
         }
 
@@ -190,7 +190,7 @@
 
         .chatbot-footer {
             display: none; /* Initially hidden */
-            border-top: 1px solid #444;
+            border-top: 1px solid #0f9cee;
         }
 
         .chatbot-footer input[type="text"] {
@@ -262,7 +262,7 @@
             <div class="small-section">
                 <h3>Resume Building</h3>
                 <p>Learn how to craft a professional resume that stands out to potential employers. Get tips on formatting, content, and highlighting your achievements.</p>
-                <a href="resume-building.html" class="button-link">Learn More</a>
+                <a href="resume.html" class="button-link">Learn More</a>
             </div>
             <div class="small-section">
                 <h3>Interview Skills</h3>
@@ -326,6 +326,20 @@
                 chatbotSend.click();
             }
         });
+
+            function getBotResponse(message) {
+      const lowerCaseMessage = message.toLowerCase();
+
+      if (lowerCaseMessage.includes('career advice')) {
+        addBotMessage('Sure, I can help with career advice. Are you looking for guidance in a specific tech field?');
+      } else if (lowerCaseMessage.includes('tech skills')) {
+        addBotMessage('To excel in tech, you should focus on learning programming languages, data structures, algorithms, and tools relevant to your field. Do you need suggestions on specific skills?');
+      } else if (lowerCaseMessage.includes('job search')) {
+        addBotMessage('For a successful job search, you should tailor your resume, prepare for technical interviews, and network with professionals in your field. Need tips on any specific area?');
+      } else {
+        addBotMessage('I am here to help with career advice in tech. Ask me anything about tech skills, job search tips, or career guidance!');
+      }
+    }
 
         function addMessage(sender, message) {
             const messageElement = document.createElement('div');
