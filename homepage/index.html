@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Skills Website</title>
     <style>
-        /* ... (same CSS as before) ... */
         * {
             margin: 0;
             padding: 0;
@@ -141,7 +140,7 @@
         }
 
         footer a {
-            color: #0f9cee;
+            color: #20298d;
             text-decoration: none;
         }
 
@@ -190,7 +189,7 @@
 
         .chatbot-footer {
             display: none; /* Initially hidden */
-            border-top: 1px solid #0f9cee;
+            border-top: 1px solid #444;
         }
 
         .chatbot-footer input[type="text"] {
@@ -262,7 +261,7 @@
             <div class="small-section">
                 <h3>Resume Building</h3>
                 <p>Learn how to craft a professional resume that stands out to potential employers. Get tips on formatting, content, and highlighting your achievements.</p>
-                <a href="resume.html" class="button-link">Learn More</a>
+                <a href="resume-building.html" class="button-link">Learn More</a>
             </div>
             <div class="small-section">
                 <h3>Interview Skills</h3>
@@ -295,12 +294,32 @@
         </div>
     </div>
 
-    <script> const chatbotContainer = document.getElementById('chatbot-container');
+    <!-- JavaScript -->
+    <script>
+        const chatbotContainer = document.getElementById('chatbot-container');
         const chatbotHeader = document.getElementById('chatbot-header');
         const chatbotBody = document.getElementById('chatbot-body');
         const chatbotFooter = document.getElementById('chatbot-footer');
         const chatbotInput = document.getElementById('chatbot-input');
         const chatbotSend = document.getElementById('chatbot-send');
+
+        const responses = {
+            hello: "Hello! How can I assist you with your career today?",
+            resume: "I can help you with resume building. Would you like tips on formatting, content, or how to highlight achievements?",
+            resumetips: "Here are some tips for a great resume: 1. Keep it concise and focused. 2. Use bullet points for clarity. 3. Tailor your resume to the job you are applying for.",
+            resumeformat: "For resume formatting, use a clean and professional layout. Avoid fancy fonts and colors. Use sections like Summary, Experience, Education, and Skills.",
+            interview: "Are you preparing for an interview? I can help with common questions, effective responses, and strategies to make a lasting impression.",
+            "interview questions" : "Common interview questions include: 1. Tell me about yourself. 2. What are your strengths and weaknesses? 3. Why do you want to work here?",
+            "interview tips": "To ace an interview, research the company, practice common questions, dress professionally, and be confident in your responses.",
+            networking: "Networking is key to career growth. Would you like some tips on how to network effectively?",
+            "networking tips": "Effective networking involves: 1. Attending industry events. 2. Using LinkedIn to connect with professionals. 3. Following up with contacts after meetings.",
+            "job search": "Searching for a job? Start with online job boards, company websites, and networking. Tailor your applications to each job.",
+            "career change": "Considering a career change? It's important to assess your skills, explore new fields, and possibly seek additional training or education.",
+            salary: "To negotiate a salary, research the average salary for your role in the industry, highlight your skills and experience, and be prepared to discuss your expectations.",
+            "cover letter": "A strong cover letter should be personalized, briefly explain your interest in the role, and highlight your most relevant experiences.",
+            thanks: "You're welcome! If you have any more questions, feel free to ask.",
+            default: "Thank you for your message. We will get back to you shortly."
+        };
 
         chatbotHeader.addEventListener('click', () => {
             const isOpen = chatbotBody.style.display === 'block';
@@ -309,14 +328,15 @@
         });
 
         chatbotSend.addEventListener('click', () => {
-            const userMessage = chatbotInput.value.trim();
+            const userMessage = chatbotInput.value.trim().toLowerCase();
             if (userMessage !== '') {
                 addMessage('user', userMessage);
                 chatbotInput.value = '';
 
                 // Simulate bot response
                 setTimeout(() => {
-                    addMessage('bot', 'Thank you for your message. We will get back to you shortly.');
+                    const botResponse = getBotResponse(userMessage);
+                    addMessage('bot', botResponse);
                 }, 1000);
             }
         });
@@ -327,20 +347,6 @@
             }
         });
 
-            function getBotResponse(message) {
-      const lowerCaseMessage = message.toLowerCase();
-
-      if (lowerCaseMessage.includes('career advice')) {
-        addBotMessage('Sure, I can help with career advice. Are you looking for guidance in a specific tech field?');
-      } else if (lowerCaseMessage.includes('tech skills')) {
-        addBotMessage('To excel in tech, you should focus on learning programming languages, data structures, algorithms, and tools relevant to your field. Do you need suggestions on specific skills?');
-      } else if (lowerCaseMessage.includes('job search')) {
-        addBotMessage('For a successful job search, you should tailor your resume, prepare for technical interviews, and network with professionals in your field. Need tips on any specific area?');
-      } else {
-        addBotMessage('I am here to help with career advice in tech. Ask me anything about tech skills, job search tips, or career guidance!');
-      }
-    }
-
         function addMessage(sender, message) {
             const messageElement = document.createElement('div');
             messageElement.classList.add('chatbot-message', sender);
@@ -348,7 +354,15 @@
             chatbotBody.appendChild(messageElement);
             chatbotBody.scrollTop = chatbotBody.scrollHeight;
         }
-        /* ... (same JavaScript as before) ... */
+
+        function getBotResponse(message) {
+            for (const keyword in responses) {
+                if (message.includes(keyword)) {
+                    return responses[keyword];
+                }
+            }
+            return responses.default;
+        }
     </script>
 </body>
 </html>
